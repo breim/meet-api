@@ -1,0 +1,36 @@
+require: rubocop-performance
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - db/**/**
+    - config/spring.rb
+    - bin/**
+    - config/environments/**
+    - test/**/**
+    - config/routes.rb
+    - vendor/bundle/**/*
+    - app/components/**/*
+    - lib/tasks/db_migration.rake
+Metrics/MethodLength:
+  Max: 40
+Metrics/AbcSize:
+  Max: 50
+Metrics/CyclomaticComplexity:
+  Max: 10
+Metrics/PerceivedComplexity:
+  Max: 10
+Layout:
+  Metrics/LineLength:
+    Max: 190
+Metrics/BlockLength:
+  AllowedMethods: ['setup', 'describe', 'context', 'namespace']
+Style/Lambda:
+  Enabled: false
+Documentation:
+  Enabled: false
+Lint/MissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
+  Enabled: false
